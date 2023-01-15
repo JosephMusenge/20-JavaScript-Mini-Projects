@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-image: linear-gradient(90deg, #EC7272, #C3FF99);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,10 +46,10 @@ body {
     outline: none;
 }
 
-.search.active.input {
+.search.active .input {
     width: 200px;
 }
 
-.search.active.btn {
+.search.active .btn {
     transform: translateX(198px);
 }

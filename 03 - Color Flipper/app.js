@@ -1,7 +1,9 @@
+// Variables
 const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
 const btn = document.getElementById("btn");
 const color = document.querySelector('.color');
 
+// Add click event on the button
 btn.addEventListener('click', function() {
     // get a random number between 0 and 3
     const randomNumber = getRandomNumber();
@@ -10,6 +12,7 @@ btn.addEventListener('click', function() {
 
 })
 
+// Function to get generate random number btn 0 and 3
 function getRandomNumber() {
     return Math.floor(Math.random() * colors.length);
 }

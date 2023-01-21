@@ -37,23 +37,25 @@ const reviews = [
         "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
     },
   ];
-  
-  // Select items
-  const img = document.getElementById("img");
+
+  // select all 
+  const img = document.getElementById("person-img");
   const author = document.getElementById("author");
   const job = document.getElementById("job");
   const info = document.getElementById("info");
-  
-  // Selct buttons
-  const prevBtn = document.querySelector("prev-btn");
-  const nextBtn = document.querySelector("next-btn");
-  const randomBtn = document.querySelector("random-btn");
-  
-  // set starting item
+
+  // Select all buttons
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const randomBtn = document.querySelector(".random-btn");
+
+  // Set intial item
   let currentItem = 0;
-  
-  // Load initial item with "DOMContentLoaded" to the window
+
   window.addEventListener("DOMContentLoaded", function() {
     const item = reviews[currentItem];
-    img.src = item.img; // You can also get the image src using "img.src = reviews[currentItem].img;"
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
   })

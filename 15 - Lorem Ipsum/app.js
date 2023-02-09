@@ -22,18 +22,17 @@ form.addEventListener("submit", function(e) {
   const value = parseInt(amount.value); // All inputs return a string so use parseInt() to return a number
   const random = Math.floor(Math.random() * text.length);
 
+  // If user selects number not btn 0-9 then output one sentence
   if (isNaN(value) || value <= 0 || value > 9) {
     result.innerHTML = `<p class="result">${text[random]}</p>`;
   } 
   else {
-    let tempText = text.slice(0, value);
+    let tempText = text.slice(0, value); // get array of two elements
     tempText = tempText.map(function(item) {
       return `<p class="result">${item}</p>`;
     }).join("");
     result.innerHTML = tempText;
   }
-
-
 
 
 })

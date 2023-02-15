@@ -19,6 +19,8 @@ let editID = "";
 form.addEventListener("submit", addItem);
 // clear items 
 clearBtn.addEventListener("click", clearItems);
+// load items
+window.addEventListener("DOMContentLoaded", setupItems);
 
 
 // ****** FUNCTIONS **********
@@ -28,31 +30,7 @@ function addItem(e) {
     
     const id = new Date().getTime().toString();
     if (value && !editFlag) {
-        const element = document.createElement("article");
-        // add class
-        element.classList.add("grocery-item");
-        // set up attribute and add class
-        const attr = document.createAttribute("data-id");
-        attr.value = id;
-        element.setAttributeNode(attr);
-        element.innerHTML = `<p class="title">${value}</p>
-                <div class="btn-container">
-                <button type="button" class="edit-btn">
-                    <i class="fas fa-edit"></i>
-                </button>
-                <button type="button" class="delete-btn">
-                    <i class="fas fa-trash"></i>
-                </button>
-                </div>`
-        
-        const deleteBtn = element.querySelector(".delete-btn");
-        const editBtn = element.querySelector(".edit-btn");
-        // delete button
-        deleteBtn.addEventListener("click", deleteItem);
-        // edit button
-        editBtn.addEventListener("click", editItem);
-        // append child
-        list.appendChild(element);
+        createListItem(id, value);
         // display alert when element is added to list
         displayAlert("item added to the list", "success");
         // And now show container
@@ -114,6 +92,7 @@ function deleteItem(e) {
     // remove from local storage 
     // removeFromLocalStorage(id);
 }
+
 // edit item function
 function editItem(e) {
     const element = e.currentTarget.parentElement.parentElement;
@@ -125,7 +104,7 @@ function editItem(e) {
     editID = element.dataset.id;
     submitBtn.textContent = "edit"; // change value in the submit btn
 }
-// edit item function
+
 // Set back to default
 function setBackToDefault() {
     grocery.value = "";
@@ -156,10 +135,57 @@ function removeFromLocalStorage(id) {
     localStorage.setItem("list", JSON.stringify(items));
 };
 
-function editLocalStorage(id, value) {};
+function editLocalStorage(id, value) {
+    let items = getLocalStorege();
+    items = items.map(function (item) {
+        if (items.id === id) {
+            item.value = value;
+        }
+        return item;
+    })
+    localStorage.setItem("list", JSON.stringify(items));
+};
 
 // set up get storage function
 function getLocalStorege() {
     return localStorage.getItem("list") ? JSON.parse(localStorage.getItem("list")) : [];
 }
 // ****** SETUP ITEMS **********
+function setupItems() {
+    let items = getLocalStorege();
+    if (items.length > 0) {
+        items.forEach(function(item) {
+            createListItem(item.id, item.value);
+        })
+        container.classList.add("show-container");
+    }
+}
+
+// Create list item function
+function createListItem(id, value) {
+    const element = document.createElement("article");
+        // add class
+        element.classList.add("grocery-item");
+        // set up attribute and add class
+        const attr = document.createAttribute("data-id");
+        attr.value = id;
+        element.setAttributeNode(attr);
+        element.innerHTML = `<p class="title">${value}</p>
+                <div class="btn-container">
+                <button type="button" class="edit-btn">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button type="button" class="delete-btn">
+                    <i class="fas fa-trash"></i>
+                </button>
+                </div>`
+        
+        const deleteBtn = element.querySelector(".delete-btn");
+        const editBtn = element.querySelector(".edit-btn");
+        // delete button
+        deleteBtn.addEventListener("click", deleteItem);
+        // edit button
+        editBtn.addEventListener("click", editItem);
+        // append child
+        list.appendChild(element);
+}

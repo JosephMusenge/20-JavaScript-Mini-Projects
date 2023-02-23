@@ -8,38 +8,40 @@ const jokeElement = document.getElementById('joke');
 button.addEventListener("click", generateJoke);
 generateJoke();
 
-async function generateJoke() {
+/* ******** METHOD ONE *********** */
+
+function generateJoke() {
     const config = {
         headers: {
             'Accept': 'application/json',
         },
     };
 
-    // Request joke from API and load it using the fetch() method
-    const result = await fetch('https://icanhazdadjoke.com', config)
+    fetch('https://icanhazdadjoke.com', config)
+        .then((response) => response.json())
+        .then((data) => {
+            jokeElement.innerHTML = data.joke;
+        })
+        .catch(error => console.log(error));
+}
 
-    const data = await result.json();
-
-    jokeElement.innerHTML = data.joke;
-
-};
 
 
-/* ******** METHOD TWO *********** */
-
-// function generateJoke() {
+/* ***************** METHOD TWO **************************** */
+// async function generateJoke() {
 //     const config = {
 //         headers: {
 //             'Accept': 'application/json',
 //         },
 //     };
 
-//     fetch('https://icanhazdadjoke.com', config)
-//         .then((response) => response.json())
-//         .then((data) => {
-//             jokeElement.innerHTML = data.joke;
-//         })
-//         .catch(error => console.log(error));
-// }
+//     // Request joke from API and load it using the fetch() method
+//     const result = await fetch('https://icanhazdadjoke.com', config)
+
+//     const data = await result.json();
+
+//     jokeElement.innerHTML = data.joke;
+
+// };
 
 /* ***************************************************************************** */

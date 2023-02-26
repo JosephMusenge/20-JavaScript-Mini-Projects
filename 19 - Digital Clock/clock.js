@@ -9,10 +9,10 @@ const secondsElement = document.querySelector(".second");
 // Store week days in array
 const weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-// Store months
+// Store months in array
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// Add event listener on dark button to change btn light and dark modes
+// Add event listener on dark mode button to change btn light and dark modes
 toggleBtn.addEventListener("click", function(e) {
     const html = document.querySelector("html");
 
@@ -25,13 +25,12 @@ toggleBtn.addEventListener("click", function(e) {
     }
 })
 
-// Get the time, date, etc.
+// Get the time, date, etc. function
 function setTime() {
     const time = new Date();
     const month = time.getMonth()
     const day = time.getDay()
-    const date = time.getDate()
-    const hours = time.getHours()
+    const date = time.getDate() 
     const hoursForClock = hours >= 13 ? hours % 12 : hours;
     const minutes = time.getMinutes()
     const seconds = time.getSeconds()
@@ -49,6 +48,8 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+// Call setaTime function
 setTime();
 
+// Set time interval
 setInterval(setTime, 1000);

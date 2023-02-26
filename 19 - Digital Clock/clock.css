@@ -83,25 +83,29 @@ body {
     left: 50%;
     height: 65px;
     width: 4px;
-    transform-origin: bottom center;
+    /* transform-origin helps in setting  the origin for an element's transformations.*/
+    transform-origin: bottom center;  
 }
 
 .hand.hour {
+    /* Property that will handle the position of the hours hand */
     transform: translate(-50%, -100%) rotate(0deg);
 }
 
 .hand.minute {
+    /* propety to handle the position of the minutes hand */
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
 }
 
 .hand.second {
+    /* Propety to hanlde the seconds hand of the clock */
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
     background-color: red;
 }
 
-/* Style the center of the clock */
+/* Style the center dot of the clock */
 .center-point {
     background-color: #e74c3c;
     height: 10px;

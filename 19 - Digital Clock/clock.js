@@ -30,7 +30,8 @@ function setTime() {
     const time = new Date();
     const month = time.getMonth()
     const day = time.getDay()
-    const date = time.getDate() 
+    const date = time.getDate()
+    const hours = time.getHours()
     const hoursForClock = hours >= 13 ? hours % 12 : hours;
     const minutes = time.getMinutes()
     const seconds = time.getSeconds()

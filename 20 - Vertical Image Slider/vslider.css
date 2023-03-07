@@ -12,7 +12,7 @@ Fonts
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Open Sans', sans-serif;
     height: 100vh;
 }
 
@@ -71,7 +71,7 @@ button {
     border: none;
     color: #aaa;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 12px;
     padding: 15px;
 }
 

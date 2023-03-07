@@ -5,7 +5,7 @@ const leftSlide = document.querySelector(".left-slide");
 const upBtn = document.querySelector(".up-btn");
 const downBtn = document.querySelector(".down-btn");
 
-const sliderLength = rightSlide.querySelectorAll("div").lenth;
+const sliderLength = rightSlide.querySelectorAll("div").length;
 
 let activeSlideIndex = 0;
 

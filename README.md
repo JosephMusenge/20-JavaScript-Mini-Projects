@@ -1,6 +1,6 @@
-# 30 JavaScript Mini Projects
+# 20 JavaScript Mini Projects
 
-This repository contains a collection of 30 small JavaScript projects that are designed to improve your JavaScript skills and understanding. Each project focuses on a specific concept or feature of JavaScript, allowing you to practice and enhance your coding abilities. These mini projects are suitable for beginners who want to strengthen their JavaScript knowledge or for experienced developers looking for quick coding challenges.
+This repository contains a collection of 20 small JavaScript projects that are designed to improve your JavaScript skills and understanding. Each project focuses on a specific concept or feature of JavaScript, allowing you to practice and enhance your coding abilities. These mini projects are suitable for beginners who want to strengthen their JavaScript knowledge or for experienced developers looking for quick coding challenges.
 
 ## Project List
 

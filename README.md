@@ -4,26 +4,26 @@ This repository contains a collection of 20 small JavaScript projects that are d
 
 ## Project List
 
-1. Project 1: [#Expanding Cards Carousel]
-2. Project 2: [#Hidden Search Bar]
-3. Project 3: [#Color Flipper]
-4. Project 4: [#Counter]
-5. Project 5: [#Reviews Page]
-6. Project 6: [#Navbar Toggle]
-7. Project 7: [#Sidebar]
-8. Project 8: [#Modal]
-9. Project 9: [#Questions]
-10. Project 10: [#Menu]
-11. Project 11: [#Video Project]
-12. Project 12: [#Page Scroll] 
-13. Project 13: [#Tabs Page]
-14. Project 14: [#Countdown Timer]
-15. Project 15: [#Lorem Ipsum Generator]
-16. Project 16: [#Grocery Todo App]
-17. Project 17: [#Slider]
-18. Project 18: [#Dads Jokes Generator]
-19. Project 19: [#Digital Clock]
-20. Project 20: [#Vertical Image Slider]
+1. Project 1: Expanding Cards Carousel
+2. Project 2: Hidden Search Bar
+3. Project 3: Color Flipper
+4. Project 4: Counter
+5. Project 5: Reviews Page
+6. Project 6: Navbar Toggle
+7. Project 7: Sidebar
+8. Project 8: Modal
+9. Project 9: Questions
+10. Project 10: Menu
+11. Project 11: Video Project
+12. Project 12: Page Scroll 
+13. Project 13: Tabs Page
+14. Project 14: Countdown Timer
+15. Project 15: Lorem Ipsum Generator
+16. Project 16: Grocery Todo App
+17. Project 17: Slider
+18. Project 18: Dads Jokes Generator
+19. Project 19: Digital Clock
+20. Project 20: Vertical Image Slider
 
 
 ## How to Use
